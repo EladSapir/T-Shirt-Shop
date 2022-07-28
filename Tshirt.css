@@ -1,0 +1,28 @@
+h1,h3{
+    text-align: center;
+}     
+
+table{
+    margin: auto;
+}
+#cont{
+    width: 50%;
+    margin: auto;
+    background-color:rgb(219, 196, 166);
+    box-shadow: 0.5em 0.5em rgb(189, 208, 236);
+}
+form div{
+    width: 70%;
+    margin: auto;
+}
+@media only screen and (max-width: 900px){
+        form div{
+            width: 90%;
+            margin: auto;
+        }
+        #cont{
+            width:90%;
+            background-color: aqua;
+            box-shadow: 0.5em 0.5em rgb(189, 208, 236);
+        }       
+}

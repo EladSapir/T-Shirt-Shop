@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapir T-Shirt Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        h1,h3{
+    text-align: center;
+}     
+
+table{
+    margin: auto;
+}
+#cont{
+    width: 50%;
+    margin: auto;
+    background-color:rgb(219, 196, 166);
+    box-shadow: 0.5em 0.5em rgb(189, 208, 236);
+}
+form div{
+    width: 70%;
+    margin: auto;
+}
+@media only screen and (max-width: 900px){
+        form div{
+            width: 90%;
+            margin: auto;
+        }
+        #cont{
+            width:90%;
+            background-color: rgb(160, 224, 224);
+            box-shadow: 0.5em 0.5em rgb(189, 208, 236);
+        }       
+}
+    </style>
+</head>
+<body>
+    <br/><br/><br/>
+    <div id="cont" class="box" >
+        <div id="form" >
+        <form action="#" class="field">
+            <h1 class="title"><br/>Contact Us:</h1>
+            <div class="box" ><label for="FullName">Full Name:</label><input class="input" type="text" name="Fname" ></div>
+            <div class="box"><label for="email">Email: </label><input class="input" type="email" name="Email" ></div>
+            <div class="box"><label for="Phone">Contact Number: </label><input class="number" type="tel" name="phone"></div>
+            <div class="box"><p>Comment:</p>
+            <textarea class="textarea" id=”address” rows=”5” placeholder="Enter your comment here:"></textarea></div>
+            <h3>Submit your appeal and we will reach you out as quick as possible</h3><br/>
+            <table class="elad">
+                <tr><td><button class="button is-primary is-large is-rounded is-focused"  type="submit">Submit</button>
+                <button class="button is-primary is-large is-rounded is-focused"  type="reset">Reset</button></td></tr>
+            </table>
+            <br/>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
