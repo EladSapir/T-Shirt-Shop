@@ -27,8 +27,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin-top: 2em;
-            background-color:rgb(163, 199, 187);
+            
         }
         .Half{
             display: flex;
@@ -36,23 +35,46 @@
             justify-content: space-around;
             width: 100%;
             height: 95%;
-            margin-left: 5px;
-            margin-right: 5px;
-            
-        }
-        p{
-            text-align: center;
-        }
 
-        header{
+        }
+        p,hea{
             text-align: center;
+ 
         }
         
         img{
             width: 200px;
             height: 200px;
         }
-        @media only screen and (max-width: 1200px){
+        @media only screen and (min-width:1200px) {
+            .line{ 
+                border-radius: 1em;
+                padding: 3em;
+                background-color:rgb(163, 199, 187);
+                padding: 0.5cm;
+                margin-bottom: 1em;
+            }
+        }
+        
+        @media only screen and (min-width:800px) and (max-width:1200px) {
+            #cont{
+                width: 80%;
+            }
+            .Half{
+            background-color:rgb(163, 199, 187);
+            border-radius: 1em;
+            margin-bottom: 1em;
+            padding: 1em;
+            }
+            .line{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: none;
+            }
+        }
+        @media only screen and (max-width: 800px)
+        {
             #cont{
                 width: 80%;
             }
@@ -60,142 +82,133 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                margin-top: 2em;
-            }
-        }
-        @media only screen and (max-width: 800px){
-            .line{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                margin-top: 2em;
             }
             .Half{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                margin-top: 2em;
-                
+                margin-bottom: 0em;
             }
             .shirt{
                 margin: auto;
+                background-color:rgb(255, 255, 255);
+                margin-bottom: 1em;          
             }
         }
-
     </style>
 </head>
 <body>
     <div class="box" id="cont">
-        <header class="title">Elad's T-shirt Shop</header>
-        <div class="box line">
+        <header class="title">Elad's T-Shirt Shop</header>
+        <div class="line">
             <div class="Half">
                 <div class="box shirt">
-                        <img href="C:\Users\ASUS\Desktop\Tshirt\T-Shirt-Shop\Photos\tshirt_1.jpg">
-                    <p>Tshirt</p><p>Tshirt</p>
+                    <img src="\Photos\tshirt_1.jpg">
+                    <br/><p>White And Black T-Shirt :<br/>"Inter Nathional Typo"</p><br/><p>59.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_2.jpg">
+                    <br/><p>Black T-Shirt:<br/>"King Gizzard"</p><br/><p>49.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_3.jpg">
+                    <br/><p>Orange T-Shirt:<br/>"EVENT CREW"</p><br/><p>39.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
-                    <button class="button is-focused is-rounded is-large">Buy</button>
-                </div>
-            </div>
-        </div>
-        <div class="box line">
-            <div class="Half">
-                <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
-                    <button class="button is-focused is-rounded is-large">Buy</button>
-                </div>
-                <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
-                    <button class="button is-focused is-rounded is-large">Buy</button>
-                </div>
-            </div>
-            <div class="Half">
-                <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
-                    <button class="button is-focused is-rounded is-large">Buy</button>
-                </div>
-                <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_4.jpg">
+                    <br/><p>Gray T-Shirt:<br/>"Born To Fly Drones"</p><p>39.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
         </div>
-        <div class="box line">
+        <div class="line">
             <div class="Half">
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_5.jpg">
+                    <br/><p>Black T-Shirt:<br/>"Get Drunk"</p><p>44.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_6.jpg">
+                    <br/><p>Black T-Shirt:<br/>"Skull with sword"</p><br/><p>35.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_7.jpg">
+                    <br/><p>Orange T-Shirt:<br/>"DON'T TEXT:</p><br/><p>39.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_8.png">
+                    <br/><p>Gray T-Shirt:<br/>"RUN"</p><br/><p>39.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
         </div>
-        <div class="box line">
+        <div class="line">
             <div class="Half">
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_9.png">
+                    <br/><p>Black T-Shirt:<br/>"I'm NOT RETIRED"</p><br/><p>44.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_10.jpg">
+                        <br/><p>Black T-Shirt:<br/>"LFO"</p><br/><p>39.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_11.jpg">
+                        <br/><p>Black T-Shirt:<br/>"LF5"</p><br/><p>44.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                    <p>Tshirt</p><p>Tshirt</p>
+                        <img src="\Photos\tshirt_12.jpg">
+                        <br/><p>Black T-Shirt:<br/>"NEW YORK"</p><br/><p>49.90$</p><br/>
+                    <button class="button is-focused is-rounded is-large">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div class="Half">
+                <div class="box shirt">
+                        <img src="\Photos\tshirt_13.jpg">
+                        <br/><p>Black T-Shirt:<br/>"Black and Green"</p><br/><p>34.90$</p><br/>
+                    <button class="button is-focused is-rounded is-large">Buy</button>
+                </div>
+                <div class="box shirt">
+                        <img src="\Photos\tshirt_14.png">
+                        <br/><p>Aqua T-Shirt:<br/>"Bunkerd"</p><br/><p>44.90$</p><br/>
+                    <button class="button is-focused is-rounded is-large">Buy</button>
+                </div>
+            </div>
+            <div class="Half">
+                <div class="box shirt">
+                        <img src="\Photos\tshirt_15.jpg">
+                        <br/><p>Black T-Shirt:<br/>"Sleep"</p><br/><p>39.90$</p><br/>
+                    <button class="button is-focused is-rounded is-large">Buy</button>
+                </div>
+                <div class="box shirt">
+                        <img src="\Photos\tshirt_16.jpg">
+                        <br/><p>Orange T-Shirt:<br/>"Just Orange"</p><br/><p>44.90$</p><br/>
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
         </div>
         <a href="Sapir_finalproject_ContactUs.html"><button id="aa"  class="button is-link is-large is-rounded is-focused" >Contuct Us</button> </a>
         <br/>
-        <footer><p>123 Main Street Westport, CT 06880 </p>
-        <p>(800) 555-1212</p>
-        <p>Copyright © 2019 | Tighty Whities, LLC | All Rights Reserved</p>
+        <footer><br/><p>123 Main Street Westport, CT 06880 </p><br/>
+        <br/><p>(800) 555-1212</p><br/>
+        <br/><p>Copyright © 2019 | Tighty Whities, LLC | All Rights Reserved</p><br/>
         </footer>
     </div>
 </body>
