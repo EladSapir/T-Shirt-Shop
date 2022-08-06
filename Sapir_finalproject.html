@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Thighty Whities</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <style>
-        #cont{
+        #cont {
             display: flex;
             flex-direction: column;
             margin: auto;
@@ -16,20 +17,23 @@
             background-color: rgb(125, 184, 164);
             text-align: center;
         }
-        .shirt{
+
+        .shirt {
             width: auto;
             height: 95%;
             display: flex;
             flex-direction: column;
-            
+
         }
-        .line{
+
+        .line {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            
+
         }
-        .Half{
+
+        .Half {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -37,91 +41,163 @@
             height: 95%;
 
         }
-        p,h1{
+
+        p,
+        h1 {
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
         }
-        
-        img{
+
+        img {
             width: 200px;
             height: 200px;
         }
+        #myIMG{
+            width: 80px;
+            height: 100px;
+        }
+
         @media only screen and (min-width:1200px) {
-            .line{ 
+            .line {
                 border-radius: 1em;
                 padding: 3em;
-                background-color:rgb(163, 199, 187);
+                background-color: rgb(163, 199, 187);
                 padding: 0.5cm;
                 margin-bottom: 1em;
             }
         }
-        
+
         @media only screen and (min-width:800px) and (max-width:1200px) {
-            #cont{
+            #cont {
                 width: 80%;
             }
-            .Half{
-            background-color:rgb(163, 199, 187);
-            border-radius: 1em;
-            margin-bottom: 1em;
-            padding: 1em;
+
+            .Half {
+                background-color: rgb(163, 199, 187);
+                border-radius: 1em;
+                margin-bottom: 1em;
+                padding: 1em;
             }
-            .line{
+
+            .line {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 background-color: none;
             }
         }
-        @media only screen and (max-width: 800px)
-        {
-            #cont{
+
+        @media only screen and (max-width: 800px) {
+            #cont {
                 width: 80%;
             }
-            .line{
+
+            .line {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
             }
-            .Half{
+
+            .Half {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 margin-bottom: 0em;
             }
-            .shirt{
+
+            .shirt {
                 margin: auto;
-                background-color:rgb(255, 255, 255);
-                margin-bottom: 1em;          
+                background-color: rgb(255, 255, 255);
+                margin-bottom: 1em;
             }
+
+            #toolB {
+                width: 50px;
+                float: right;
+                position: relative;
+                background-color: cornflowerblue;
+                height: 400px;
+            }
+
         }
     </style>
 </head>
+
 <body>
+    
+    <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://www.linkedin.com/in/elad-sapir/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcgAAABuCAMAAACUTXOfAAAAjVBMVEX///8KZsIAYsEAXb8AWr4AXL8AZMEAWL62yuj4+/0OaMPU3/GvxOUAVr0AX8Cmv+NikdGatuBZjM/y9vtCf8szeMikveMgbsWSr91TiM7q8flIg8yFqNrh6vZ/o9ja5PN1nda6zenG1u3K2e5sl9MAT7sASLmLrNwdbcU8e8krc8Z4ndZfj9F/pNgAUr0ZNN/AAAAMy0lEQVR4nO2d6ZqiOhCGJYREVOKC+9Jqa4+t3afv//IOuACpSljsKA7D92OemWGR5CVbpapoNGqZUfvt2HqorNPmvexCVl/+ghNmPVaM8NO87IJWXD4jD6Z4ZUlXZRe12jo9h2PYKt2yy1pldemTOFqWvSy7sFXW6dHDYyxml13YCmvOn8bRsni77OJWV+3n9ayW5WzLLm519VyQzbKLW13VICuiGmRFVIOsiGqQFVENsiJSgiQOD0SN2+4eAnLeXzBhzbr/uP1PAZJ5g+280fB3G9MotSCbk5GkSSd3Ad48mwUiNh+bqZHu5CSpZ+a2v9VAfipUQxikOEW7FH7PrN1HC7JDmSTazVk8fyJuN2d0dlcNQY0d6VGEmbv+WkMi11AmSCG9gX2jJPUgbfAQeUFOkn2G/V24ehQaC+lRyKuAlG3iNqwhCJIs5ONT55VBbuTreP4eWa9qgGS2D04YGdwdMQ1y/iNfxljR6lGoGiDFFN5gZ7BzNQ1yKsAPUANW+WqA5NixpmWuSZoGeYSPJt6K1Y5KlQDJTvgOX+bWIKZBIp8xE7VeCZBEMe8bg0p+IZBoIsaGhSpHqWqA3OM7wEr+hUyDtFCLHBSqHKWqAVJREf3XBTmDvT6eqxVXJUCyFr7D/nXHSNTrm3AKqgRIi2MnYvG6s1aXy8+mmqsVVjVAii94g6ZB045xy05XXuT+mPDSqwZI3CTRhOIXMm9r7SVfM69frG7UqghINpGP96Dx5LVANjberYDMDMeqgLTIKWlt3Zubsj4GZGM74YIQYvPhumjdqFUVkBYT0R5C+2SyPT4GZPCU0/1g0zeEsUIgLea0Dtv1+r0/4objQh4D0rCqAzJslA6l1OC646oa5P26C+SjVIO8XzXIoqpBZqsGeb+eA5IxIgIRlj6svgbI9Xuz2dzuVhpHWHMg/V1n+va1338tx+8F8ie0u8v9YDbYB1cltvkLg2RA2UeYzcnsa7lcvvWGhDspGUKMg/SBIjYuOBD9f3fBOXVsx3E4n2xUniE5QPpzLHhKZ29xxxbhGjd4ySkn+1xuKJ0Zp/b5IiJsyltfu+uB4pYdoFZ05BMcudyZ8VM/8brNtxvh6FAaBzn78ZL6iHaxxh/SgT+XevbfuJ18Mwl13qCzWQ6Q2w8O9UdOj7BdcBu80Ocfy8hQ4x4cR95rYoJ/Xpb1Rb3okB/a9+3ONqRwduahJ5wJqdPS2IOMg+zJxbYjI10X+EmecXU5sm8EFQUNe5kg1x4u2CZ5Qp9Q5avMhPdfWmnGXLXiY3QSGjuKgiTw7oMIJHQatVjQHNV++n21KaFckN/qh6JDebDMAjm30W0kb/QmwyfEZ5JdQyP/qOvJmDd+MEjGdGP4WlmYUkEedeZGIe9iZoB0P1HJyCg+7C/SzWHM0zgxrO2UDXw+fShI0kIDTKSV6vUqE+RQbzYWkstWBsghqm/Wipv0O8/0p6AKv6jgQi+Vv9ecPRCk0HMMboxHkhJBum9p2zg0OU6mg+yh+zART2H66TiutaAgucu6kLTkf5sE6aXvx09x1T0PJLihvU33l/cS08lUkAe8WeTF+y7LfF75FPWuK/XsKEUmQWYlJMMu6qWBtDK248QmvmcayA4m5cWz9kPe6IofONPH426WTILMUgd5+5QHMks8HiVSQO7wcMHjJ+0oBhNLaeuC6RU3xbd9nwkSe/S/LshEvehBrvCElB7io4gjcTynZTncQROgZA+gnk4UeODrTR4IcglftNcFmYg10IL0sfHRTsxbYPfI+Gx7buf+doCmMl5y3XZPXsengkR23NJmrXH5ZPNxLC/q7LQgcWJbkYgKhnM7e5RwPllPwDudjM1oKvctwm2I0FSrgfxUkI0XA8kEF6PhyMaWuqCPjCwuOpALdBVJWBLmoHukG/lJZ+BqLx6UVTMdwllv2u2ODz2mXpk+BKQ/1ywoYWxGuSDFZ/eyylgt8WAXX6oBif0JGUtMWcB8xUaBmiCWM/69dzzXJXwTN+f1RoXSOEi/Pwqt/863yoYII4pLBckTy6UV6l/jvk4NEmfFYE5i8enLhxXhfSAxbuw/3EOYnIW8SzIf4tIgGr8E2bka7BnxFPloYLhBmSDlVfgKbcMeb4eUIJt4YinZQ0DImqewQR+E8hQXvSEcL9D/Q8Oo4RaZNEk5mOQa/H6JIGG2EhgsyKzbERVIxQLBk/aJJ1ILV4WZwlFUXPeNtnC1rcz8/gXLYxZkW8qqwdHOJOhwygTJgQOzC99xfjuiADnHFjR5/24lF5Qqv1YDYF/f+w3oWTVB1zBdgtmuVU7dwkbwuPsyXWvcc2oujaeRGKSLA5mo3GzANVTpDiT/4m0LHxoyFYGNocCrYhZkG9wcpwQBq6DyQNoowKcLJmLRw2OQIzQdscEwAhi1VE49PogYvlgF4ccBlL1yqG9QVJMgsyelrVcBSdFOzU4XTwhAsu89XkDC7g8sBRny6QkFXge6Vj0G1XkQvMsnGh0jwaa1JdAwfXoVkBytdGFToLdBFIC08BenYOihYuaZQ5dPLoAHZUJbVvk3jIKE7hwEzVtHLwJSUT+w8rUgkRiBbwUcwHLpUkawKGF6L9qFVJcmQcI5qWLCdXwVkIrkArBPu3W+WSAVjkp3eXlfHhZMWnGnFulNei6TINF7iKtr+Cog0aQVZVvKDdISaE73fg9IcZCqF5YAafowkHC5b7FPePHLgFQszvKCRNY8XEy0qM+jS+MDPlVCnwZaNmGYBImjDaoIks1mkKSASwRzIO0UkA9rkRgkSrdUAZBkgOYCKMHvfV3rBSQYI/Wpu+Rpkcl15D8CctYYI07A/IIGmTy6gARWAq09AJa1BhkpP0jslAxWknBXGQWuqXQxjv8n0m6clGxcqUFGKgASf2TT3kj3Aivq1nGUrdO5F4W7MJ4uYAusEWqQkQqAVHy/2JOKIq+XU8wzSHCepF1/9IELQg3ypiIgGwvUuUo7BMBfEFt2tYKLcW1+fbD/UIOMVAgk7lwl68cWpGYskFodhkRqmuQBbufUIG8qBFLRuSadjF0w28E2+rNU498AtnVPlcMLuSj8KyA7pkHiztXiCWcPsFuItw/OmgwxYORKzQTeWl6hcNO/BCT5nqbqZv94IkgfuXskh0loElB+E+hbEDvTHSZ0z4MnbbGryV8C0jpne9HKuXF5IshGB0fUJXxboJexh912wtBK5qHhEyVmD07qJRvlShUz/7eATBe7ucQ9E6Sic01MalDomQespqtrpk1xAiOlyr5HvOG47bsN12/3j0pX8xpkpMIgceeaHCZRJA5NJpD1l3GCYNjtKoMjmU25IxxONZklapCRCoNUhLkyGjUv7PrKvON4Hcxu3HVn4CVvyuWpUEY0tVo1yEjFQaqGs3iYVGQpCJtV+I1jmLBDtKQlBs4vka0aZKQ7QCo6VztOgYS9JvUFkJK04BDZbNUgI90BMj2HgCIQVisqTV67xTvXGmSke0CqOlcnWuQrcwspBXPt5PgGAPDKrEFGugukonMlsWPXKmf2cL6BD7PIqgByHP+NHgIZKg9ko4l7wUT4lD/JURBlFrNZ+oWMufKHwGqQke4DiY3cshVnn/llBoWZLtQmbcZDrDn0oqtB3nQnSB+v0KUvjL+nJYcMzQEzTZx+R5/Gzh65yB2yBnnTnSBVnSuR/J+n+g9tMPqpbI5n+TiLy+Ui79x3/x0gnTzuSpFIDFL6f9HX3BCFTwUCPxl9enJsy5eiaIyBQA/kHJInuH1GFUsRRvhJVwHXGl3g1Lvk9q2ovvRczmv6tXY9u4jojcv3Jfv3TU4CpFwbC/yblEnXxiDlZ6HoUtd20BN9gIb2vrF5MkcOI4Lam2wPkNWS8TjHPyO2N7jF2RX0NEcuIxFI8UCQVdR6vB85nFMamuk+v/t5/XiC6072JaJysu+kZVKVhJLTc09WPAoJcETxVS1wBuzz/ymQZ/mrdbu9zshJr7puvloVu+o1PuBS69cqCeT8zfr5mBxydxy1slQOyGmrGTBcHf6U+OmkiqkUkPub7X9O9NFHtQqpDJDNfaOxHff7wZTd/dF+B6NWIZUBMoyHne073UWwRGsqovtr3aESQLZDM8gsXJX+CQbKj+Jz81oKPRfk2elsHFpBZgHT3Uf4l1wfcauVJRyd8kBdzGDT8M8escQpHB/3xRMz11Kp+Ccn7haj51/shi1y0GmcP8LWGNQt0oxgyOwDdXXMXoe7MsEYuTpn1vypjQKGhD+Y8yAx55r9MvQFXQQ96jJchqjTk9YqruLfZbqTY5Q7ehcCDPvVsdvQpCetdYfmJ9U2qGGKjCa8q/ub6198q57qmFRzJpQZRs3JHkrEmpPO2daKIgFr/VbuY4V+r9MbHntX0+v/kYMuAbHUFoAAAAAASUVORK5CYII=">
+                <img id ="myIMG" src="https://media-exp1.licdn.com/dms/image/C4D03AQGUJmyWwedbyQ/profile-displayphoto-shrink_800_800/0/1658599963312?e=1665014400&v=beta&t=LtmQLliGihHyoEcnfx1hqilRovTbfYWefd1M5ZFWRSw">
+            </a>
+            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                
+            </div>
+        </div>
+
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://www.linkedin.com/in/elad-sapir/">
+                        Docs
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="https://www.linkedin.com/in/elad-sapir/">
+                            Elad Sapir
+                        </a>
+                        <a class="navbar-item" >
+                            Back-End
+                        </a>
+                        <a class="navbar-item" >
+                            Front-End
+                        </a>
+                        <a class="navbar-item" >
+                            Full-Stack
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href=>
+                            Development
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
     <div class="box" id="cont">
         <header class="title">Thighty Whities</header>
+
         <div class="line">
             <div class="Half">
                 <div class="box shirt">
                     <img src="\Photos\tshirt_1.jpg">
-                    <br/><p>B&W T-Shirt :<br/>"Inter Nathional"</p><br/><p>59.90$</p><br/>
+                    <br />
+                    <p>B&W T-Shirt :<br />"Inter Nathional"</p><br />
+                    <p>59.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_2.jpg">
-                    <br/><p>Black T-Shirt:<br/>"King Gizzard"</p><br/><p>49.90$</p><br/>
+                    <img src="\Photos\tshirt_2.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"King Gizzard"</p><br />
+                    <p>49.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_3.jpg">
-                    <br/><p>Orange T-Shirt:<br/>"EVENT CREW"</p><br/><p>39.90$</p><br/>
+                    <img src="\Photos\tshirt_3.jpg">
+                    <br />
+                    <p>Orange T-Shirt:<br />"EVENT CREW"</p><br />
+                    <p>39.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_4.jpg">
-                    <br/><p>Gray T-Shirt:<br/>"Born To Fly Drones"</p><br/<p>39.90$</p><br/>
+                    <img src="\Photos\tshirt_4.jpg">
+                    <br />
+                    <p>Gray T-Shirt:<br />"Born To Fly Drones"</p><br/><p>39.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
@@ -129,25 +205,33 @@
         <div class="line">
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_5.jpg">
-                    <br/><p>Black T-Shirt:<br/>"Get Drunk"</p><p>44.90$</p><br/>
+                    <img src="\Photos\tshirt_5.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br/>"Get Drunk"</p><br />
+                    <p>44.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_6.jpg">
-                    <br/><p>Black T-Shirt:<br/>"Skull with sword"</p><br/><p>35.90$</p><br/>
+                    <img src="\Photos\tshirt_6.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"Skull with sword"</p><br />
+                    <p>35.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_7.jpg">
-                    <br/><p>Orange T-Shirt:<br/>"DON'T TEXT:</p><br/><p>39.90$</p><br/>
+                    <img src="\Photos\tshirt_7.jpg">
+                    <br />
+                    <p>Orange T-Shirt:<br />"DON'T TEXT:</p><br />
+                    <p>39.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_8.png">
-                    <br/><p>Gray T-Shirt:<br/>"RUN"</p><br/><p>39.90$</p><br/>
+                    <img src="\Photos\tshirt_8.png">
+                    <br />
+                    <p>Gray T-Shirt:<br />"RUN"</p><br />
+                    <p>39.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
@@ -155,25 +239,33 @@
         <div class="line">
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_9.png">
-                    <br/><p>Black T-Shirt:<br/>"I'm NOT RETIRED"</p><br/><p>44.90$</p><br/>
+                    <img src="\Photos\tshirt_9.png">
+                    <br />
+                    <p>Black T-Shirt:<br />"I'm NOT RETIRED"</p><br />
+                    <p>44.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_10.jpg">
-                        <br/><p>Black T-Shirt:<br/>"LFO"</p><br/><p>39.90$</p><br/>
+                    <img src="\Photos\tshirt_10.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"LFO"</p><br />
+                    <p>39.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_11.jpg">
-                        <br/><p>Black T-Shirt:<br/>"LF5"</p><br/><p>44.90$</p><br/>
+                    <img src="\Photos\tshirt_11.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"LF5"</p><br />
+                    <p>44.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_12.jpg">
-                        <br/><p>Black T-Shirt:<br/>"NEW YORK"</p><br/><p>49.90$</p><br/>
+                    <img src="\Photos\tshirt_12.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"NEW YORK"</p><br />
+                    <p>49.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
@@ -181,35 +273,47 @@
         <div class="line">
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_13.jpg">
-                        <br/><p>Black T-Shirt:<br/>"Black and Green"</p><br/><p>34.90$</p><br/>
+                    <img src="\Photos\tshirt_13.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"Black and Green"</p><br />
+                    <p>34.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_14.png">
-                        <br/><p>Aqua T-Shirt:<br/>"Bunkerd"</p><br/><p>44.90$</p><br/>
+                    <img src="\Photos\tshirt_14.png">
+                    <br />
+                    <p>Aqua T-Shirt:<br />"Bunkerd"</p><br />
+                    <p>44.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
             <div class="Half">
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_15.jpg">
-                        <br/><p>Black T-Shirt:<br/>"Sleep"</p><br/><p>39.90$</p><br/>
+                    <img src="\Photos\tshirt_15.jpg">
+                    <br />
+                    <p>Black T-Shirt:<br />"Sleep"</p><br />
+                    <p>39.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
                 <div class="box shirt">
-                        <img src="\Photos\tshirt_16.jpg">
-                        <br/><p>Orange T-Shirt:<br/>"Just Orange"</p><br/><p>44.90$</p><br/>
+                    <img src="\Photos\tshirt_16.jpg">
+                    <br />
+                    <p>Orange T-Shirt:<br />"Just Orange"</p><br />
+                    <p>44.90$</p><br />
                     <button class="button is-focused is-rounded is-large">Buy</button>
                 </div>
             </div>
         </div>
-        <a href="Sapir_finalproject_ContactUs.html"><button id="aa"  class="button is-link is-large is-rounded is-focused" >Contuct Us</button> </a>
-        <br/>
-        <footer><br/><p>123 Main Street Westport, CT 06880 </p><br/>
-        <br/><p>(800) 555-1212</p><br/>
-        <br/><p>Copyright © 2019 | Tighty Whities, LLC | All Rights Reserved</p><br/>
+        <a href="Sapir_finalproject_ContactUs.html"><button id="aa"
+                class="button is-link is-large is-rounded is-focused">Contuct Us</button> </a>
+        <br />
+        <footer>
+            <p ><a href="privacyPolicy.html" >Privacy Policy</a></p>
+            <p>123 Main Street Westport, CT 06880 </p><br />
+            <p>(800) 555-1212</p><br />
+            <p>Copyright © 2019 | Tighty Whities, LLC | All Rights Reserved</p><br />
         </footer>
     </div>
 </body>
+
 </html>
